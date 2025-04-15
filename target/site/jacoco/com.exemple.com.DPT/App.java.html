@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">DPT</a> &gt; <a href="index.source.html" class="el_package">com.exemple.com.DPT</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums">package com.exemple.com.DPT;
+
+<span class="nc" id="L3">public class App {</span>
+    public static void main(String[] args) {
+<span class="nc" id="L5">        Bibliotheque bibliotheque = new Bibliotheque();</span>
+
+<span class="nc" id="L7">        Livre livre1 = new Livre(&quot;1984&quot;, &quot;George Orwell&quot;, &quot;123456&quot;);</span>
+<span class="nc" id="L8">        Livre livre2 = new Livre(&quot;Animal Farm&quot;, &quot;George Orwell&quot;, &quot;654321&quot;);</span>
+
+        // Ajouter des livres
+<span class="nc" id="L11">        bibliotheque.ajouterLivre(livre1);</span>
+<span class="nc" id="L12">        bibliotheque.ajouterLivre(livre2);</span>
+
+        // Afficher tous les livres
+<span class="nc" id="L15">        System.out.println(&quot; Liste des livres :&quot;);</span>
+<span class="nc bnc" id="L16" title="All 2 branches missed.">        for (Livre livre : bibliotheque.listerLivres()) {</span>
+<span class="nc" id="L17">            System.out.println(livre);</span>
+<span class="nc" id="L18">        }</span>
+
+        // Recherche d'un livre
+<span class="nc" id="L21">        Livre livreCherche = bibliotheque.chercherLivre(&quot;123456&quot;);</span>
+<span class="nc bnc" id="L22" title="All 2 branches missed.">        System.out.println(&quot;\n Livre trouve : &quot; + (livreCherche != null ? livreCherche.getTitre() : &quot;Aucun&quot;));</span>
+
+        // Suppression d'un livre
+<span class="nc" id="L25">        bibliotheque.supprimerLivre(&quot;123456&quot;);</span>
+
+        // Afficher la liste après suppression
+<span class="nc" id="L28">        System.out.println(&quot;\n Liste apres suppression :&quot;);</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">        for (Livre livre : bibliotheque.listerLivres()) {</span>
+<span class="nc" id="L30">            System.out.println(livre);</span>
+<span class="nc" id="L31">        }</span>
+<span class="nc" id="L32">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
